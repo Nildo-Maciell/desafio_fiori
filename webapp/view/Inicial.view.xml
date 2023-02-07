@@ -1,0 +1,22 @@
+<mvc:View controllerName="googleimagens.controller.Inicial" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <FlexBox id="_IDGenFlexBox1" justifyContent="Center">
+                <Input id="inpBusca" submit="onPressBuscar"/>
+                <Button id="_IDGenButton1" text="Buscar" press="onPressBuscar" />
+            </FlexBox>
+
+            <List id="_IDGenList1" headerText="Lista de Resultados" items="{ModeloImagem>/Imagens}">
+                <CustomListItem id="_IDGenCustomListItem1">
+                    <HBox id="_IDGenHBox1">
+                        <Image id="_IDGenImage1" src="{ModeloImagem>thumbnail}" width="5em" />
+                        <VBox id="_IDGenVBox1">
+                            <Link id="_IDGenLink1" text="{ModeloImagem>title}" href="{ModeloImagem>url}" target="_Blank" />
+                            <Label id="_IDGenLabel1" text="{ModeloImagem>provider/name}" />
+                        </VBox>
+                    </HBox>
+                </CustomListItem>
+            </List>
+        </content>
+    </Page>
+</mvc:View>
